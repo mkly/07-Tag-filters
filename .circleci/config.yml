@@ -31,3 +31,6 @@ workflows:
       - deploy:
           requires:
             - test
+          fitlers:
+            tags:
+              only: '/^beta-[a-z]+-\d+\.\d+\.\d+/'
