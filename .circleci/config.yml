@@ -33,6 +33,6 @@ workflows:
             - test
           filters:
             branches:
-              ignore: '/.*'
+              ignore: /.*/
             tags:
-              only: '/^beta-.*/'
+              only: /^beta-.*/
