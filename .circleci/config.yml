@@ -21,18 +21,18 @@ jobs:
       - run: echo "Deploy complete"
 
 workflows:
-  version: 2
-  build-test-and-deploy:
-    jobs:
-      - build
-      - test:
-          requires:
+    version: 2
+    build-test-and-deploy:
+        jobs:
             - build
-      - deploy:
-          requires:
-            - test
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /beta-.*/
+            - test:
+                requires:
+                    - build
+            - deploy:
+                requires:
+                    - test
+                filters:
+                    branches:
+                        ignore: /.*/
+                    tags:
+                        only: /beta-.*/
