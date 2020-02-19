@@ -35,4 +35,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /^beta-.*/
+              only: /beta-.*/
