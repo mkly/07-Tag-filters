@@ -25,11 +25,13 @@ workflows:
   build-test-and-deploy:
     jobs:
       - build
-          tags:
-            only: /.*/
+          filters:
+            tags:
+              only: /.*/
       - test:
-          tags:
-            only: /.*/
+          filters: 
+            tags:
+              only: /.*/
           requires:
               - build
       - deploy:
