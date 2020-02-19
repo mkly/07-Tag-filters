@@ -1,4 +1,4 @@
-# Challenge Title
+# Challenge Title.
 
 **Description:**
 
