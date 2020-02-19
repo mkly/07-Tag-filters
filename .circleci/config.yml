@@ -33,4 +33,4 @@ workflows:
             - test
           filters:
             tags:
-              only: '/^beta-[a-z]+-\d+\.\d+\.\d+/'
+              only: 'noop'
